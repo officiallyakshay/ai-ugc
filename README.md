@@ -1,0 +1,2 @@
+# AI UGC
+# ai-ugc
