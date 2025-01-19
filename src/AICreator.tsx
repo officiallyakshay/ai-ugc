@@ -10,27 +10,40 @@ export const AICreator = () => {
     <div>
       <button
         style={{
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+          gap: "0.5rem",
           border: "1px solid white",
           color: "white",
           backgroundColor: "black",
-          marginTop: "1rem",
-          borderRadius: "4px",
-          padding: "6px",
-          width: "60px",
+          padding: "0.5rem 1rem",
+          borderRadius: "8px",
+          fontSize: "1rem",
+          fontWeight: "500",
           cursor: "pointer",
+          transition: "all 0.3s ease",
+          marginTop: "20px",
+        }}
+        onMouseEnter={(e) => {
+          e.currentTarget.style.backgroundColor = "white";
+          e.currentTarget.style.color = "black";
+        }}
+        onMouseLeave={(e) => {
+          e.currentTarget.style.backgroundColor = "black";
+          e.currentTarget.style.color = "white";
         }}
         onClick={() => navigate("/")}
       >
-        Back
+        <span>&larr;</span> Back
       </button>
+
       <div
         style={{
           border: "1px solid white",
-          padding: "2rem",
+          padding: "1rem",
           borderRadius: "12px",
-          boxShadow: "0 8px 16px rgba(0, 0, 0, 0.1)",
-          width: "350px",
-          margin: "0 auto",
+          margin: "1rem auto",
           textAlign: "center",
         }}
       >
@@ -38,8 +51,8 @@ export const AICreator = () => {
           src={creator.image}
           alt={creator.name}
           style={{
-            width: "150px",
-            height: "150px",
+            width: "120px",
+            height: "120px",
             objectFit: "cover",
             borderRadius: "50%",
             marginBottom: "1rem",
@@ -48,7 +61,7 @@ export const AICreator = () => {
         <h2
           style={{
             margin: "0",
-            fontSize: "1.75rem",
+            fontSize: "1.5rem",
             color: "white",
             fontWeight: "600",
           }}

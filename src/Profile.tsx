@@ -11,11 +11,11 @@ export const Profile = () => {
     <div
       style={{
         border: "1px solid white",
-        padding: "2rem",
+        padding: "1.5rem",
         borderRadius: "12px",
         boxShadow: "0 8px 16px rgba(0, 0, 0, 0.1)",
-        width: "350px",
-        margin: "0 auto",
+        maxWidth: "90%", // For mobile responsiveness
+        margin: "1rem auto",
         textAlign: "center",
       }}
     >
@@ -23,8 +23,8 @@ export const Profile = () => {
         src={creator.image}
         alt={creator.name}
         style={{
-          width: "150px",
-          height: "150px",
+          width: "120px",
+          height: "120px",
           objectFit: "cover",
           borderRadius: "50%",
           marginBottom: "1rem",
@@ -33,7 +33,7 @@ export const Profile = () => {
       <h2
         style={{
           margin: "0",
-          fontSize: "1.75rem",
+          fontSize: "1.5rem",
           color: "white",
           fontWeight: "600",
         }}
@@ -53,6 +53,7 @@ export const Profile = () => {
           border: "none",
           borderRadius: "8px",
           cursor: "pointer",
+          fontSize: "1rem",
         }}
       >
         {isEditing ? "Cancel" : "Edit Profile"}
@@ -66,7 +67,7 @@ const EditComponent = ({ creator }: any) => {
   return (
     <div
       style={{
-        marginTop: "2rem",
+        marginTop: "1.5rem",
         backgroundColor: "#f1f1f1",
         padding: "1rem",
         borderRadius: "8px",

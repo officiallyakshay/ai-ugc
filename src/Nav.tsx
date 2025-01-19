@@ -6,6 +6,10 @@ export const Nav = () => {
       <nav
         style={{
           display: "flex",
+          justifyContent: "space-between",
+          padding: "1rem",
+          borderBottom: "1px solid white",
+          flexWrap: "wrap",
           gap: "1rem",
         }}
       >
@@ -13,32 +17,22 @@ export const Nav = () => {
           to="/"
           style={({ isActive }) => ({
             color: "white",
-            textDecoration: isActive ? "underline" : "none",
+            textDecoration: "none",
+            fontWeight: isActive ? "bold" : "400",
           })}
         >
           AI UGC
         </NavLink>
-        <div style={{ marginLeft: "auto" }}>
-          {/* <NavLink
-            to="/pricing"
-            style={({ isActive }) => ({
-              color: "white",
-              textDecoration: isActive ? "underline" : "none",
-              marginRight: "20px",
-            })}
-          >
-            Pricing
-          </NavLink> */}
-          <NavLink
-            to="/profile"
-            style={({ isActive }) => ({
-              color: "white",
-              textDecoration: isActive ? "underline" : "none",
-            })}
-          >
-            Profile
-          </NavLink>
-        </div>
+        <NavLink
+          to="/profile"
+          style={({ isActive }) => ({
+            color: "white",
+            textDecoration: "none",
+            fontWeight: isActive ? "bold" : "400",
+          })}
+        >
+          Profile
+        </NavLink>
       </nav>
     </>
   );

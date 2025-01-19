@@ -7,42 +7,17 @@ export const Home = () => {
 
   return (
     <>
-      <div style={{ textAlign: "center" }}>AI Creator's Available</div>
-      {/* <div style={{ textAlign: "center", marginTop: "10px" }}>
-        <button
-          style={{
-            color: "white",
-            border: "1px solid white",
-            backgroundColor: "black",
-            padding: "5px",
-            borderRadius: "5px",
-            marginRight: "4px",
-            cursor: "pointer",
-          }}
-        >
-          Carousel View
-        </button>
-        <button
-          style={{
-            color: "white",
-            border: "1px solid white",
-            backgroundColor: "black",
-            padding: "5px",
-            borderRadius: "5px",
-            marginLeft: "4px",
-            cursor: "pointer",
-          }}
-        >
-          List View
-        </button>
-      </div> */}
+      <div
+        style={{ textAlign: "center", fontSize: "1.25rem", margin: "1rem 0" }}
+      >
+        AI Creators Available
+      </div>
       <div
         style={{
-          display: "flex",
-          flexWrap: "wrap",
-          gap: "2rem",
-          justifyContent: "center",
-          padding: "2rem",
+          display: "grid",
+          gap: "1rem",
+          gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))",
+          padding: "1rem",
         }}
       >
         {listOfCreators.map((creator) => (
@@ -51,15 +26,13 @@ export const Home = () => {
             style={{
               border: "1px solid white",
               borderRadius: "12px",
-              width: "600px",
               overflow: "hidden",
               padding: "1.5rem",
               display: "flex",
               alignItems: "center",
-              cursor: "pointer",
-              transition:
-                "transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out",
+              gap: "1rem",
               textDecoration: "none",
+              backgroundColor: "black",
             }}
             to={`/${creator.id}`}
           >
@@ -67,20 +40,17 @@ export const Home = () => {
               src={creator.image}
               alt={creator.name}
               style={{
-                width: "100px",
-                height: "100px",
+                width: "80px",
+                height: "80px",
                 objectFit: "cover",
                 borderRadius: "50%",
-                marginRight: "1rem",
-                border: "1px solid white",
               }}
             />
-
             <div>
               <h4
                 style={{
                   margin: "0",
-                  fontSize: "1.5rem",
+                  fontSize: "1.25rem",
                   fontWeight: "600",
                   color: "white",
                 }}
@@ -103,6 +73,15 @@ export const Home = () => {
           </Link>
         ))}
       </div>
+      <style>
+        {`
+          @media (min-width: 768px) {
+            div[style*='grid'] {
+              grid-template-columns: repeat(2, 1fr); /* 2 columns for medium+ screens */
+            }
+          }
+        `}
+      </style>
     </>
   );
 };
