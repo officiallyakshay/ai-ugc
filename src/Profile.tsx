@@ -43,7 +43,7 @@ export const Profile = () => {
       <p style={{ color: "white", margin: "0.5rem 0" }}>{creator.location}</p>
       <p style={{ fontSize: "1rem", color: "white" }}>{creator.bio}</p>
 
-      <button
+      {/* <button
         onClick={handleEditToggle}
         style={{
           marginTop: "1rem",
@@ -58,58 +58,57 @@ export const Profile = () => {
       >
         {isEditing ? "Cancel" : "Edit Profile"}
       </button>
-      {isEditing && <EditComponent creator={creator} />}
+      {isEditing && <EditComponent creator={creator} />}*/}
     </div>
   );
 };
 
-const EditComponent = ({ creator }: any) => {
-  return (
-    <div
-      style={{
-        marginTop: "1.5rem",
-        backgroundColor: "#f1f1f1",
-        padding: "1rem",
-        borderRadius: "8px",
-        textAlign: "left",
-      }}
-    >
-      <h3>Edit Profile</h3>
-      <label style={{ display: "block", marginBottom: "0.5rem" }}>Name</label>
-      <input
-        type="text"
-        value={creator.name}
-        style={{
-          width: "100%",
-          padding: "0.5rem",
-          marginBottom: "1rem",
-          borderRadius: "8px",
-          border: "1px solid #ccc",
-        }}
-      />
-      <label style={{ display: "block", marginBottom: "0.5rem" }}>Bio</label>
-      <textarea
-        value={creator.bio}
-        style={{
-          width: "100%",
-          padding: "0.5rem",
-          marginBottom: "1rem",
-          borderRadius: "8px",
-          border: "1px solid #ccc",
-        }}
-      />
-      <button
-        style={{
-          padding: "0.5rem 1rem",
-          backgroundColor: "#28a745",
-          color: "#fff",
-          border: "none",
-          borderRadius: "8px",
-          cursor: "pointer",
-        }}
-      >
-        Save Changes
-      </button>
-    </div>
-  );
-};
+// const EditComponent = ({ creator }: any) => {
+//   return (
+//     <div
+//       style={{
+//         marginTop: "1.5rem",
+//         padding: "1rem",
+//         borderRadius: "8px",
+//         textAlign: "left",
+//       }}
+//     >
+//       <h3>Edit Profile</h3>
+//       <label style={{ display: "block", marginBottom: "0.5rem" }}>Name</label>
+//       <input
+//         type="text"
+//         value={creator.name}
+//         style={{
+//           width: "100%",
+//           padding: "0.5rem",
+//           marginBottom: "1rem",
+//           borderRadius: "8px",
+//           border: "1px solid #ccc",
+//         }}
+//       />
+//       <label style={{ display: "block", marginBottom: "0.5rem" }}>Bio</label>
+//       <textarea
+//         value={creator.bio}
+//         style={{
+//           width: "100%",
+//           padding: "0.5rem",
+//           marginBottom: "1rem",
+//           borderRadius: "8px",
+//           border: "1px solid #ccc",
+//         }}
+//       />
+//       <button
+//         style={{
+//           padding: "0.5rem 1rem",
+//           backgroundColor: "#28a745",
+//           color: "#fff",
+//           border: "none",
+//           borderRadius: "8px",
+//           cursor: "pointer",
+//         }}
+//       >
+//         Save Changes
+//       </button>
+//     </div>
+//   );
+// };
